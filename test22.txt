@@ -1,0 +1,14 @@
+#tar
+tar cf backup.tar /home
+
+#extract
+cd / 
+tar xf /home/backup
+ 
+# 2 method 'cp'
+cp -a /home /mnt/resdisk
+	where
+# -a like -dpR
+# -d - no link
+# -p - save mode
+# -R - copy all recursive

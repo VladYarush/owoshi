@@ -1,0 +1,10 @@
+#!/bin/bash
+trap "echo ' Trap for Ctrl-C'" SIGINT
+echo This is a test script
+count=1
+while [ $count -le 15 ]
+do
+echo "Loop #$count"
+sleep 2
+count=$(( $count + 1 ))
+done

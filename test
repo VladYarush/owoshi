@@ -1,0 +1,25 @@
+##1 - useradd lisa matt crew
+##2 - addgroup A1 B1
+##3 - usermod -G A1 lisa
+      usermod -G B1 lisa
+      usermod -G A1 matt
+      usermod -G B1 matt
+      usermod -G B1 crew
+
+
+
+##4 - vim /etc/sudoers
+User_Alias GroupA1 = lisa, matt
+User_Alias GroupB1 = lisa, matt, crew
+
+Cmnd_Alias POWER = /sbin/reboot, /sbin/restart
+Cmnd_Alias Printerserver = /usr/lib/cups /etc/cups /usr/share/cups /usr/share/man/man1/cups.1.gz
+
+GroupA1 ALL = Printerserver
+GroupB1 ALL = POWER
+GroupB1 ALL = /home/kakayato_papka/kakoyto_fail
+
+
+
+
+

@@ -1,0 +1,2 @@
+ps -eo rss,rsz |awk '{s+=$1} END {print s} END {s+=$2} END {print s}' > qwer.txt 
+

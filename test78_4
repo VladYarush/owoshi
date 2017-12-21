@@ -1,0 +1,4 @@
+#! bin/bas
+sudo cat /home/vlad/Downloads/owoshi/owoshi/imena | cut -d : -f 1,3 > XUETA
+cat XUETA | cut -d : -f 1 > pizda
+for x in `sort pizda | uniq -d`; do echo `grep -n $x pizda`; done

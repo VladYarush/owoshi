@@ -1,0 +1,3 @@
+1) crontab -r -u USERNAME
+
+2) use file cron.deny or cron.allow (it must contain name of user who have access right for use cron. Delete username )

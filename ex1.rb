@@ -3,8 +3,8 @@ class Ludi
 attr_reader :gender, :weight, :mass, :color
 
 def gender=(value)
-if value == ''
-raise "baba ne chelovek, kurica ne ptica"
+if value == 'baba'
+raise "Kurica ne ptica, baba ne chelovek"
 end
 @gender = value
 end
@@ -42,8 +42,8 @@ def genitalii
  	puts "Bla bla bla genitalii u nego takie to"
 end
 end
-lydi = Ludi.new
-ludi.gender = "mugik" 
+ludi = Ludi.new
+ludi.gender = "baba" 
 ludi.weight = 180 
 ludi.mass = 80 
 ludi.color = "chernuiy"

@@ -1,0 +1,4 @@
+a)sudo cat /etc/passwd | cut -d : -f1,4 | grep -w -b 0
+
+b)sudo cat /etc/passwd | cut -d : -f 1,2 | grep -w 0
+

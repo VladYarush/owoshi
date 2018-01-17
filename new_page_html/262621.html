@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex</title>
+	<meta charset="utf-8">
+</head>
+<style>
+
+
+#main {
+	position:relative;
+    width: ;
+	height:960px;
+	background:grey;
+}
+
+#scr {
+	position: absolute;
+	width: 800px;
+	height:640px;
+	border: 10px solid black;
+	border-radius:100px;
+	background-size:cover;
+    margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+button {
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 33%;
+    top: 50%;
+}
+.left {
+	left:-58px;
+	cursor: pointer;
+}
+.right {
+	right:-58px;
+	cursor: pointer;
+}
+
+
+
+
+</style>
+<script>
+var slider = {
+	slides:['devushka1.jpg','devushka2.jpg','margo.jpg', 'abstract.jpg', 'abstract2.jpg'],
+	frame:1, 
+	set: function(image) { 
+		document.getElementById("scr").style.backgroundImage = "url("+image+")";
+	},
+	init: function() { 
+		this.set(this.slides[this.frame]);
+	},
+	left: function() { 
+		this.frame--;
+		if(this.frame < 0) this.frame = this.slides.length-1;
+		this.set(this.slides[this.frame]);
+	},
+	right: function() {
+		this.frame++;
+		if(this.frame == this.slides.length) this.frame = 0;
+		this.set(this.slides[this.frame]);		
+	}
+};
+window.onload = function() { 
+	slider.init();
+};
+</script>
+<body>
+	<div id ="main"></div>
+	<div id="scr">
+	<div id="button">
+	<button class="left" onclick="slider.left();"><</button>
+	<button class="right" onclick="slider.right();">></button>
+	
+	</div>
+</div>
+</body>
+</html>
